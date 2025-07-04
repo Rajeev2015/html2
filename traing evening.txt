@@ -1,0 +1,261 @@
+Wap in js accept a number check and display number is positive or negative ?
+Wap in js accept a number check and display number is even or odd ?
+Wap in js accept a weekday number check and display  weekday name  ?
+Wap in js accept a month number check and display  how many days are that month   ?
+
+Wap in js accept a character check and display character is vowel or consonant ?
+
+Wap in js accept phy , che , math number and each paper is maximum 100 marks 
+calculate average and given condition below 
+
+avg range between 
+ 0 to 30 => fail 
+30 to 45 => ||| 
+45 to 60 => ||
+60 to 100 => | div 
+
+Wap in js accept three numbers check and display maximum number ?
+Wap in js accept four numbers check and display maximum number ?
+Wap in js accept five numbers check and display maximum number ?
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my_btn {
+            border-style: solid;
+            width: 140px;
+            height: 40px;
+            background-color: orange;
+            color: white;
+            cursor: pointer;
+            border-width: 0px;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            font-size: 14px;
+        }
+
+        .my_btn:hover {
+            border-style: solid;
+            width: 140px;
+            height: 40px;
+            background-color: darkblue;
+            color: white;
+            cursor: pointer;
+            border-width: 0px;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function monthCheck() {
+            var month_number = parseInt(prompt("Enter the monthe number : ?"))
+            // if (month_number == 1) {
+            //     document.getElementById("result").innerHTML = "31 days"
+            // }
+            // else if (month_number == 2) {
+            //     document.getElementById("result").innerHTML = "28 days"
+            // }
+            // else if (month_number == 3) {
+            //     document.getElementById("result").innerHTML = "31 days"
+            // }
+            // else if (month_number == 4) {
+            //     document.getElementById("result").innerHTML = "30 days"
+            // }
+            // else if (month_number == 5) {
+            //     document.getElementById("result").innerHTML = "31 days"
+            // }
+            // else if (month_number == 6) {
+            //     document.getElementById("result").innerHTML = "30 days"
+            // }
+            // else if (month_number == 7) {
+            //     document.getElementById("result").innerHTML = "31 days"
+            // }
+            // else if (month_number == 8) {
+            //     document.getElementById("result").innerHTML = "31 days"
+            // }
+            // else if (month_number == 9) {
+            //     document.getElementById("result").innerHTML = "30 days"
+            // }
+            // else if (month_number == 10) {
+            //     document.getElementById("result").innerHTML = "31 days"
+            // }
+            // else if (month_number == 11) {
+            //     document.getElementById("result").innerHTML = "30 days"
+            // }
+            // else if (month_number == 12) {
+            //     document.getElementById("result").innerHTML = "31 days"
+            // }
+            // else 
+            // {
+            //     document.getElementById("result").innerHTML="Invalid Month Number ! "+month_number
+            // }
+            if (month_number == 1 || month_number == 3 || month_number == 5 || month_number == 7 || month_number == 8 || month_number == 10 || month_number == 12) {
+                if (month_number == 1) {
+                    document.getElementById("result").innerHTML = "Jan 31 days";
+                }
+                else if (month_number == 3) {
+                    document.getElementById("result").innerHTML = "March 31 days";
+                }
+                else if (month_number == 5) {
+                    document.getElementById("result").innerHTML = "May 31 days";
+                }
+                else if (month_number == 7) {
+                    document.getElementById("result").innerHTML = "July 31 days";
+                }
+                else if (month_number == 8) {
+                    document.getElementById("result").innerHTML = "Aug 31 days";
+                }
+                else if (month_number == 10) {
+                    document.getElementById("result").innerHTML = "Oct 31 days";
+                }
+                else {
+                    document.getElementById("result").innerHTML = "Dec 31 days";
+                }
+            }
+            else if (month_number == 4 || month_number == 6 || month_number == 9 || month_number == 11) {
+                // document.getElementById("result").innerHTML = "30 days"
+                if (month_number == 4) {
+                    document.getElementById("result").innerHTML = "April 30 days";
+                }
+                else if (month_number == 6) {
+                    document.getElementById("result").innerHTML = "June 30 days";
+                }
+                else if (month_number == 9) {
+                    document.getElementById("result").innerHTML = "Sep 30 days";
+                }
+
+                else {
+                    document.getElementById("result").innerHTML = "Nov 30 days";
+                }
+            }
+            else if (month_number == 2) {
+                document.getElementById("result").innerHTML = "Feb 28 days"
+            }
+            else {
+                document.getElementById("result").innerHTML = "Invalid Month Number ! " + month_number
+            }
+
+        }
+
+        function maxThree() {
+            var a = parseInt(prompt("Enter 1 number : ?"))
+            var b = parseInt(prompt("Enter 2 number : ?"))
+            var c = parseInt(prompt("Enter 3 number : ?"))
+            if (a > b && a > c) {
+                alert("max number is : " + a)
+            }
+            else if (b > a && b > c) {
+                alert("max number is : " + b)
+            }
+            else {
+                alert("Max number is : " + c)
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div style="text-align: center;">
+        <input type="submit" value="Month Check" onclick="monthCheck()" class="my_btn">
+        <br>
+        <br>
+        <div id="result" style="font-size: 20px;color: green; font-weight: 500;"></div>
+
+        <br>
+        <input type="submit" value="Max THree" onclick="maxThree()">
+    </div>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function weekdayCheck() {
+            var day = parseInt(prompt("Enter the weekday number : ?"))
+            // if (day == 1) {
+            //     alert("Monday")
+            // }
+            // if (day == 2) {
+            //     alert("Tue")
+            // }
+            // if (day == 3) {
+            //     alert("Wed")
+            // }
+            // if (day == 4) {
+            //     alert("Thu")
+            // }
+            // if (day == 5) {
+            //     alert("Fri")
+            // }
+            // if (day == 6) {
+            //     alert("sat")
+            // }
+            // if (day == 7) {
+            //     alert("Sun")
+            // }
+            // else
+            // {
+            //     alert("Invalid Weekday Number !"+day)
+            // }
+            if (day == 1) {
+                alert("Monday")
+            }
+            else if (day == 2) {
+                alert("Tues")
+            }
+            else if (day == 3) {
+                alert("Wed")
+            }
+            else if (day == 4) {
+                alert("THur")
+            }
+            else if (day == 5) {
+                alert("Fri")
+            }
+            else if (day == 6) {
+                alert("Sat")
+            }
+            else if (day == 7) {
+                alert("Sun")
+            }
+            else {
+                alert("Invalid weekday number ! " + day)
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="submit" value="Weekday Check" onclick="weekdayCheck()">
+</body>
+
+</html>
+
+
+Loops 
+
+Array
+ 
