@@ -1,0 +1,13 @@
+{
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "emmet.triggerExpansionOnTab": true,
+        "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "django-html": "html"
+    },
+    "files.associations": {
+        "*.html": "html"
+    },
+}
