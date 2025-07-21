@@ -1,0 +1,178 @@
+What is database ?
+	=> Where we can store data as permanently in a database.
+
+RDBMS                                                 BIG DATA
+MySQL                                                     MongoDb  (NoSQL + Not Only Sql)
+Oracle
+SQL SRVER
+Sql Lite 
+
+How to download mongodb and step ?
+	=> Mongodb download
+	=> MongoDB Community Server Download
+	=> after that download mongodb software  then click next and accept term and conditions and select
+		complete installation .
+
+For Editor mongoDb 
+https://www.filehorse.com/download-robo-3t-robomongo/
+
+How to create database ?
+
+use <database_name>
+=> If database is not exits then database will create first time .
+=> if database is all ready exits then go inside database.
+
+How to creation collection ?
+db.createCollection('collection_name')
+Note : Collection name must be plurals.
+Ex: bolg          => blogs 
+       user          => users
+       library     => libraries 
+
+How to insert documents in a collections ?
+
+	db.<collection.name>.insertOne()
+	db.<collection.name>.insertMany([{}.,{},{}]
+
+
+use bbdDbSecond
+db.createCollection('libraries')   // create table <table_name>
+// insert into libraries values('','','','','',)
+db.libraries.insertOne(
+    {
+        book_name:'html',
+        book_author:'jone',
+        book_page_number:"300",
+        book_price:"400",
+        book_edition:'4th',
+        book_description:'HTML, which stands for HyperText Markup Language, is the standard language used to create and structure content on the web. Its essentially the foundational language that tells web browsers how to display text, images, links, and other multimedia elements on a webpage. Think of it as the blueprint or structure of a website. '
+    })
+// select * from libraries
+db.libraries.find({})
+
+
+db.libraries.insertMany([{},{},{},{},{}])
+db.libraries.insertMany([
+      {
+    
+      "book_name": "javascript",
+      "book_author": "Does",
+      "book_page_number": "400",
+      "book_price": "600",
+      "book_edition": "5th",
+      "book_description": "It is programming language for web and client side"
+    },
+    {
+      
+      "book_name": "html",
+      "book_author": "harry",
+      "book_page_number": "400",
+      "book_price": "150",
+      "book_edition": "5th",
+      "book_description": "It is programming language for web and client side"
+    },
+    {
+     
+      "book_name": "bootstrap",
+      "book_author": "peter",
+      "book_page_number": "500",
+      "book_price": "250",
+      "book_edition": "5th",
+      "book_description": "It is programming language for web and client side"
+    },
+    {
+    
+      "book_name": "react",
+      "book_author": "james",
+      "book_page_number": "400",
+      "book_price": "350",
+      "book_edition": "3th",
+      "book_description": "It is programming language for web and client side"
+    }
+    
+    ])
+
+
+db.libraries.insertMany([
+      {
+    
+      "book_name": "node",
+      "book_author": "sumit",
+      "book_page_number": "200",
+      "book_price": "400",
+      "book_edition": "2th",
+      "book_description": "It is programming language for web and client side"
+    },
+    {
+      
+      "book_name": "express",
+      "book_author": "suresh",
+      "book_page_number": "400",
+      "book_price": "550",
+      "book_edition": "4th",
+      "book_description": "It is programming language for web and client side"
+    },
+    {
+     
+      "book_name": "mongodb",
+      "book_author": "rocky",
+      "book_page_number": "420",
+      "book_price": "620",
+      "book_edition": "7th",
+      "book_description": "It is programming language for web and client side"
+    },
+    {
+    
+      "book_name": "python",
+      "book_author": "jone",
+      "book_page_number": "550",
+      "book_price": "750",
+      "book_edition": "3th",
+      "book_description": "It is programming language for web and client side"
+    }
+    
+    ])
+
+
+db.libraries.find()
+db.libraries.find({"book_name":"html"})  // select * from libraries where book_name='javascript'
+db.libraries.find({"book_price":{$lte:"400"}}) // select * from libraries where book_price < 400
+db.libraries.find({"book_price":{$gte:"400"}})
+db.libraries.find({"book_page_number":{$gte:"500"}})
+db.libraries.find({"book_name":{$ne:"html"}})
+db.mycol.find({"name":{$in:["Raj", "Ram", "Raghu"]}}).pretty()
+db.libraries.find({"book_name":{$nin:["html","bootstrap","react"]}})
+db.libraries.find({$and:[{"book_page_number":"400"},{"book_price":"150"}]})
+
+db.libraries.find({})
+db.libraries.updateOne({"book_name":"node"},{$set:{"book_edition":"3th"}})
+db.libraries.find({"book_name":"node"})
+db.libraries.updateOne({"book_name":"node"},{$set:{"book_edition":"4th","book_page_number":"300","book_price":"600"}})
+db.libraries.remove({"book_name":"javascript"})
+db.libraries.insertOne({
+    "book_name" : "html",
+    "book_author" : "ramesh",
+    "book_page_number" : "170",
+    "book_price" : "190",
+    "book_edition" : "5th",
+    "book_description" : "It is programming language for web and client side"
+})
+db.libraries.remove({"_id":ObjectId("687e0c975399174618536581")})
+
+
+db.libraries.find({})
+db.COLLECTION_NAME.find({},{KEY:1})
+db.libraries.find({"book_name":"react"},{"book_name":1,"book_edition":1,"book_price":1,"_id":0})
+db.COLLECTION_NAME.find().limit(NUMBER)
+db.libraries.find().limit(5).skip(2)
+db.COLLECTION_NAME.find().sort({KEY:1})
+db.libraries.find().sort({"book_page_number":1})
+db.COLLECTION_NAME.createIndex({KEY:1})
+db.libraries.createIndex({"book_name":1})
+
+
+ 
+
+
+
+
